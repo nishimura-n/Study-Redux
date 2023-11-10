@@ -7,7 +7,10 @@ import { createStore } from "redux";
 import allReducers from "./reducers";
 
 //store
-let store = createStore(allReducers);
+let store = createStore(
+  allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
