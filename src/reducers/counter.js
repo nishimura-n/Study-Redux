@@ -2,7 +2,7 @@
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case "INCREMNT":
-      return state + 1;
+      return state + action.payload;
     case "DEREMENT":
       return state - 1;
     default:
