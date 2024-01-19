@@ -24,13 +24,13 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find(
         (item) => item.id === action.payload
       );
-      cartItem.amount = cartItem + 1;
+      cartItem.amount = cartItem.amount + 1;
     },
     decrease: (state, action) => {
       const cartItem = state.cartItems.find(
         (item) => item.id === action.payload
       );
-      cartItem.amount = cartItem - 1;
+      cartItem.amount = cartItem.amount - 1;
     },
     calculatetTotals: (state) => {
       let amount = 0;
